@@ -1,0 +1,17 @@
+{{ define "friend_list" }}
+
+{{ if .Friends }}
+
+<ul>
+{{ range $friend := .Friends }}
+<li>🌲 {{ $friend.Name }} - {{ $friend.Email }}</li>
+{{ end }}
+</ul>
+
+{{ else }}
+
+<div>No friends yet 🌲</div>
+
+{{ end }}
+
+{{ end }}
